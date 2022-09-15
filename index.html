@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mt-3">Movies</h1>
+    <form class="js-form form-control d-flex justify-content-between">
+      <input class="js-input-titel form-control w-25" type="text" placeholder="Hulk" value="hulk" required>
+
+      <input class="js-input-page form-control " type="number" value="1" placeholder="1">
+
+      <select class="js-select">
+        <option value="Movie">Movie</option>
+        <option value="series">Series</option>
+      </select>
+
+      <button class="btn btn-danger" type="submit">submit</button>
+    </form>
+
+
+
+    
+    <h2 class="mt-2 h1 js-error text-center transpernt"></h2>
+    <ul class="js-result mt-5  d-flex justify-content-between list-unstyled transpernt flex-wrap"></ul>
+  </div>
+
+      <!-- spiner -->
+    <div class="content-spinner js-content-spinner spinner-border text-danger position-absolute top-0 end-0 bottom-0 start-0 m-auto d-none"role="status"></div>
+
+  <!-- Modal -->
+  <div class="modal fade js-modal-movie" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title js-modal-movie-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body js-modal-movie-summary">
+          ...
+        </div>
+        <div class="modal-body js-modal-movie-year">
+          ...
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- template -->
+  <template id="news__template">
+    <li class="news__item card ms-sm-4 mb-4 bg-light">
+      <img class="news__img-poster card-img-top rounded position-relative" src="" alt="" width="300" height="300">
+      <div class="card-body">
+        <h2 class="news__card-title title-width h4 text-dark"></h2>
+      </div>
+      
+      <div class="d-flex justify-content-between container">
+        <a class="new__link h3" href="">triller...</a>
+        <button class="btn btn-primary js-movie-info-button" type="button" data-bs-toggle="modal"data-bs-target="#exampleModal">
+          More info
+        </button>
+      </div>
+    </li>
+  </template>
+
+      <!-- template second -->
+  <template id="second__template">
+    <li class="second__item card ms-sm-4 mb-4 bg-light container w-25">
+      <a class="second__img-poster text-decoration-none" href="">
+        <h2 class="second__card-title h4 text-dark text-decoration-none"></h2>
+        <span class="h4 text-dark d-flex">date: <p class="second__card-title-second h4 text-dark text-decoration-none"></p></span>
+        <span class="h4 text-dark d-flex">Episode: <p class="second__card-title-third h4 text-dark text-decoration-none"></p></span>
+        <span class="h4 text-dark d-flex">Reting:<p class="second__card-title-fourth h4 text-dark text-decoration-none"></p></span>
+      </a>
+    </li>
+  </template>
+
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
