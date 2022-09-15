@@ -92,12 +92,12 @@ const renderMovieSecond = data => {
 const renderMovies = async (movie, page=1)=> {
   try {
     if (elSelect.value === "Movie") {
-      let respone = await fetch(`http://www.omdbapi.com/?s=${movie}&apikey=51f50317&page=${page}`);
+      let respone = await fetch(`http://www.omdbapi.com/?s=${movie}&apikey=6150da7e&page=${page}`);
       const data = await respone.json();
       renderMovie(data)
     } 
     if (elSelect.value === "series") {
-      let respone = await fetch(`http://www.omdbapi.com/?t=${movie}&apikey=51f50317&Season=${page}`)
+      let respone = await fetch(`http://www.omdbapi.com/?t=${movie}&apikey=6150da7e&Season=${page}`)
       const data = await respone.json();
       renderMovieSecond(data)
     }
@@ -136,3 +136,10 @@ elForm.addEventListener("submit", (evt) => {
   let inputVall = elInputPage.value
   renderMovies(inputVal, inputVall);
 });
+
+
+
+
+
+
+// api 51f50317
